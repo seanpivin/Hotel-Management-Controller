@@ -2,6 +2,30 @@ import { createGlobalStyle } from "styled-components";
 
 /* Colors adapted from https://tailwindcss.com/docs/customizing-colors */
 
+// themes.js
+export const lightTheme = {
+  body: "#FFF",
+  text: "#363537",
+  toggleBorder: "#FFF",
+  background: "#363537",
+};
+
+export const darkTheme = {
+  body: "#363537",
+  text: "#FAFAFA",
+  toggleBorder: "#6B8096",
+  background: "#999",
+};
+
+export const BodyThemOptions = createGlobalStyle`
+  body {
+    background-color: ${(props) => props.theme.body};
+    color: ${(props) => props.theme.text};
+    transition: all 0.50s linear;
+  }
+  // Other global styles...
+`;
+
 const GlobalStyles = createGlobalStyle`
 :root {
   /* Indigo */
