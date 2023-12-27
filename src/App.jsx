@@ -1,17 +1,8 @@
 import styled from "styled-components";
 import GlobalStyles from "styled-components";
-import Btn from "./ui/Button";
+import Btn from "./ui/Btn";
 import Input from "./ui/Input";
-
-const H1 = styled.h1`
-  font-size: 60px;
-  font-weight: 600;
-  color: #000;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  border-radius: 7px;
-`;
+import Header from "./ui/Header";
 
 const H2 = styled.h2`
   font-size: 30px;
@@ -28,16 +19,26 @@ const StyledApp = styled.div`
   padding: 50px;
 `;
 
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+`;
+
 function App() {
   return (
     <>
       <GlobalStyles />
       <StyledApp>
-        <H1>Zimmer Man</H1>
+        <Header>Zimmer Man</Header>
         <H2>You take care the Guests</H2>
         <H2>We take care the Rest</H2>
-        <Btn onClick={() => alert("Check In")}>Check-In</Btn> &nbsp;
-        <Btn onClick={() => alert("Check Out")}>Check-Out</Btn>
+        <ButtonContainer>
+          <Btn onClick={() => alert("Check In")}>Check-In</Btn> &nbsp;
+          <Btn onClick={() => alert("Check Out")}>Check-Out</Btn>
+        </ButtonContainer>
         <Input type="number" placeholder="Enter Room Number" />
       </StyledApp>
     </>

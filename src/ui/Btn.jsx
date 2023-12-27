@@ -51,27 +51,20 @@ export const variations = {
 const Btn = styled.button`
   font-size: 20px;
   font-weight: 600;
-  color: #111;
-  background-color: var(--color-brand-900 #312e81);
+  color: #fff; // Light color for dark background
+  background-color: #333; // Dark background color
   text-align: center;
   padding: 1.2rem 1.5rem;
-  border: 2px solid #111;
+  border: 2px solid #444; // Adjust border color for dark theme
   border-radius: 4px;
   cursor: pointer;
   &:hover {
-    background-color: #111;
+    background-color: #444; // Slightly lighter on hover
     color: #fff;
   }
   align-items: center;
-  display: flex;
   justify-content: center;
-  margin: 0 auto;
-  display: block;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  margin-left: auto;
-  margin-right: auto;
-  width: 20%;
+  width: auto; // Adjust width as needed
 `;
 
 export default Btn;
