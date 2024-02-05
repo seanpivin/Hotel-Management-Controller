@@ -49,7 +49,7 @@ export const variations = {
 };
 
 const Btn = styled.button`
-  font-size: 20px;
+  font-size: 1.4rem;
   font-weight: 600;
   color: #fff; // Light color for dark background
   background-color: #333; // Dark background color
