@@ -49,22 +49,18 @@ export const variations = {
 };
 
 const Btn = styled.button`
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: #fff; // Light color for dark background
-  background-color: #333; // Dark background color
   text-align: center;
-  padding: 1.2rem 1.5rem;
-  border: 2px solid #444; // Adjust border color for dark theme
+  border: 2px solid #444;
   border-radius: 4px;
-  cursor: pointer;
-  &:hover {
-    background-color: #444; // Slightly lighter on hover
-    color: #fff;
-  }
-  align-items: center;
-  justify-content: center;
-  width: auto; // Adjust width as needed
+  box-shadow: var(--shadow-sm);
+
+  ${(p) => sizes[p.size]}
+  ${(p) => variations[p.variation]}
 `;
+
+Btn.defaultProps = {
+  size: "medium",
+  variation: "primary",
+};
 
 export default Btn;
