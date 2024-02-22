@@ -1,29 +1,13 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
-const Header = styled.div`
-  display: flex;
-  font-weight: 600;
-  color: #000;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  border-radius: 7px;
-  ${(p) =>
-    p.type === "h1" &&
-    css`
-      font-size: 60px;
-    `}
-
-  ${(p) =>
-    p.type === "h2" &&
-    css`
-      font-size: 40px;
-    `}
-  ${(p) =>
-    p.type === "h3" &&
-    css`
-      font-size: 20px;
-    `}
+const StyledHeader = styled.header`
+  background-color: var(--color-grey-100);
+  padding: 1.2rem 4.8rem;
+  border-bottom: 1px solid var(--color-gray-100);
 `;
+
+function Header() {
+  return <StyledHeader>Header</StyledHeader>;
+}
 
 export default Header;
